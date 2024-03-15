@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { Product } from '../product.model';
 import { ProductServiceService } from '../services/product-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-delete-product',
@@ -15,7 +16,8 @@ export class DeleteProductComponent implements OnInit {
   constructor(
     private service: ProductServiceService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -29,11 +31,15 @@ export class DeleteProductComponent implements OnInit {
   delete(): void{
     const id = this.route.snapshot.paramMap.get('id') as string
     this.service.delete(id).subscribe(() => {
-      this.router.navigate(['/products'])
+      this.snackBar.open(
+        "Produto deletado com sucesso!",
+        "Fechar"
+      )
+      this.navigateProductsPage()
     })
   }
 
-  cancel(): void{
+  navigateProductsPage(): void{
     this.router.navigate(['/products'])
   }
 

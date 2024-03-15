@@ -5,6 +5,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: rgb(227,94,107);
 }
 
+.button-green{
+    background-color: #228B22;
+    color: white;
+}
+
 .v-middle{
     vertical-align: middle;
 }

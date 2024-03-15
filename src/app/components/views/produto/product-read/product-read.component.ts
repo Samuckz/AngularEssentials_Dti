@@ -26,9 +26,4 @@ export class ProductReadComponent implements OnInit {
     });
   }
 
-  // delete(){
-  //   this.dialog.open(DeleteProductComponent)
-    
-  // }
-
 }

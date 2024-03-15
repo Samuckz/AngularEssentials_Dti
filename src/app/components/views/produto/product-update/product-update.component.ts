@@ -1,9 +1,9 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Component, OnInit } from '@angular/core';
 import { ProductServiceService } from '../services/product-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from './../product.model';
-import { NOTFOUND } from 'dns';
-import { subscribeOn } from 'rxjs';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-product-update',
@@ -17,25 +17,32 @@ export class ProductUpdateComponent implements OnInit {
   constructor(
     private service: ProductServiceService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') as string
+    const id: string | null = this.route.snapshot.paramMap.get('id');
     
-    this.service.readyById(id).subscribe((product) => {
-      this.product = product;
-    })
+    if(id !== null){
+      this.service.readyById(id).subscribe((product) => {
+        this.product = product;
+      })
+    }
   }
 
   update(): void{
     this.service.update(this.product).subscribe(() => {
-      this.router.navigate(['/products']);
+      this.snackBar.open(
+        "Produto atualizado com sucesso",
+        "Fechar"
+      )
+      this.navigateProductsPage();
     })
     
   }
 
-  cancel(): void{
+  navigateProductsPage(): void{
     this.router.navigate(['/products'])
   }
 
