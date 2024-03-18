@@ -1,9 +1,8 @@
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackBarService } from './../services/snackBar-service/snack-bar.service';
 import { Component, OnInit } from '@angular/core';
-import { ProductServiceService } from '../services/product-service.service';
+import { ProductServiceService } from '../services/produto-service/product-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from './../product.model';
-import { MatNativeDateModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-product-update',
@@ -18,7 +17,7 @@ export class ProductUpdateComponent implements OnInit {
     private service: ProductServiceService,
     private router: Router,
     private route: ActivatedRoute,
-    private snackBar: MatSnackBar
+    private snackService: SnackBarService
   ) { }
 
   ngOnInit(): void {
@@ -33,10 +32,7 @@ export class ProductUpdateComponent implements OnInit {
 
   update(): void{
     this.service.update(this.product).subscribe(() => {
-      this.snackBar.open(
-        "Produto atualizado com sucesso",
-        "Fechar"
-      )
+      this.snackService.createSnackBar("Produto atualizado com sucesso!")
       this.navigateProductsPage();
     })
     

@@ -1,8 +1,8 @@
+import { SnackBarService } from './../services/snackBar-service/snack-bar.service';
 import { Product } from './../product.model';
 import { Component, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { ProductServiceService } from 'src/app/components/views/produto/services/product-service.service';
+import { ProductServiceService } from 'src/app/components/views/produto/services/produto-service/product-service.service';
 
 @Component({
   selector: 'app-create-product',
@@ -19,7 +19,7 @@ export class CreateProductComponent implements OnInit {
   constructor(
     private service: ProductServiceService,
     private router: Router,
-    private snackBar: MatSnackBar
+    private snackService: SnackBarService
   ) { }
 
   ngOnInit(): void {
@@ -29,10 +29,7 @@ export class CreateProductComponent implements OnInit {
   salvar(): void{
     this.service.create(this.product).subscribe(
       () => {
-        this.snackBar.open(
-          "Produto cadastrado com sucesso!",
-          "Fechar" 
-        )
+        this.snackService.createSnackBar("Produto cadastrado com sucesso!")
         this.navigateProductsPage() 
       }
     )
