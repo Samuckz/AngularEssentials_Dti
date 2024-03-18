@@ -1,9 +1,8 @@
+import { SnackBarService } from './../services/snackBar-service/snack-bar.service';
 import { Component, OnInit } from '@angular/core';
-import { ProductServiceService } from '../services/product-service.service';
+import { ProductServiceService } from '../services/produto-service/product-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from './../product.model';
-import { NOTFOUND } from 'dns';
-import { subscribeOn } from 'rxjs';
 
 @Component({
   selector: 'app-product-update',
@@ -17,25 +16,29 @@ export class ProductUpdateComponent implements OnInit {
   constructor(
     private service: ProductServiceService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private snackService: SnackBarService
   ) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') as string
+    const id: string | null = this.route.snapshot.paramMap.get('id');
     
-    this.service.readyById(id).subscribe((product) => {
-      this.product = product;
-    })
+    if(id !== null){
+      this.service.readyById(id).subscribe((product) => {
+        this.product = product;
+      })
+    }
   }
 
   update(): void{
     this.service.update(this.product).subscribe(() => {
-      this.router.navigate(['/products']);
+      this.snackService.createSnackBar("Produto atualizado com sucesso!")
+      this.navigateProductsPage();
     })
     
   }
 
-  cancel(): void{
+  navigateProductsPage(): void{
     this.router.navigate(['/products'])
   }
 

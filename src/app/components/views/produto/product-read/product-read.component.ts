@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductServiceService } from '../services/product-service.service';
+import { ProductServiceService } from '../services/produto-service/product-service.service';
 import { Product } from '../product.model';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -25,10 +25,5 @@ export class ProductReadComponent implements OnInit {
       
     });
   }
-
-  // delete(){
-  //   this.dialog.open(DeleteProductComponent)
-    
-  // }
 
 }

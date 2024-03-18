@@ -1,8 +1,7 @@
-import { Product } from './../product.model';
+import { Product } from '../../product.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { url } from 'inspector';
-import { Observable } from 'rxjs';
+import { Observable, catchError, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +15,7 @@ export class ProductServiceService {
   ) { }
 
   create(product: Product): Observable<Product>{
-    return this.http.post<Product>(this.API, product)
+    return this.http.post<Product>(this.API, product);
   }
 
   read(): Observable<Product[]>{
@@ -25,7 +24,9 @@ export class ProductServiceService {
 
   readyById(id: string): Observable<Product>{
     const urlConsultada = `${this.API}/${id}`
-    return this.http.get<Product>(urlConsultada)
+    return this.http.get<Product>(urlConsultada).pipe(
+      map(obj => obj)
+    )
   }
 
   update(product: Product): Observable<Product>{
