@@ -20,6 +20,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { ProductUpdateComponent } from './components/views/produto/product-update/product-update.component';
 import { DeleteProductComponent } from './components/views/produto/delete-product/delete-product.component';
 
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +50,9 @@ import { DeleteProductComponent } from './components/views/produto/delete-produc
     MatPaginatorModule,
     MatSortModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue:'pt'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
