@@ -38,5 +38,4 @@ export class ProductServiceService {
     const urlConsultada = `${this.API}/${id}`
     return this.http.delete<Product>(urlConsultada)
   }
-
 }

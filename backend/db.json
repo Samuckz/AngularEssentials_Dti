@@ -1,19 +1,24 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Teclado Mecânico alterado",
       "price": 239.99
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Notebook Dell",
       "price": 3599.99
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Celular Samsung S20",
       "price": 5000
+    },
+    {
+      "id": "f7e8",
+      "name": "Produto teste",
+      "price": "123"
     }
   ]
 }
