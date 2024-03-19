@@ -20,7 +20,7 @@ export class CreateProductComponent implements OnInit {
     category: null
   }
 
-  categories: Category[] = []
+  categories: String[] = []
 
   constructor(
     private service: ProductServiceService,

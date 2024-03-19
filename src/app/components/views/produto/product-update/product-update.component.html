@@ -19,7 +19,7 @@
                 [(ngModel)]="product.category"
                 name="category">
 
-              <mat-option *ngFor="let category of categories" [value]="category.id">{{category.category}}</mat-option>
+              <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
             </mat-select>
           </mat-form-field>
 

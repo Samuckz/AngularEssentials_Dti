@@ -13,12 +13,8 @@ export class CategoryServiceService {
     private httpClient: HttpClient
   ) { }
 
-  getCategories(): Observable<Category[]>{
-    return this.httpClient.get<Category[]>(this.categoriesAPI);
+  getCategories(): Observable<String[]>{
+    return this.httpClient.get<String[]>(this.categoriesAPI);
   }
 
-  getCategoryById(id: number): Observable<Category>{
-    const urlConsultada = `${this.categoriesAPI}/${id}`
-    return this.httpClient.get<Category>(urlConsultada)
-  }
 }
