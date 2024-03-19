@@ -1,19 +1,116 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Teclado Mecânico alterado",
-      "price": 239.99
+      "price": 239.99,
+      "category": 19
+    },
+    {
+      "id": "2",
+      "name": "Notebook Dell",
+      "price": 3599.99,
+      "category": 1
+    },
+    {
+      "id": "3",
+      "name": "Celular Samsung S20",
+      "price": 5000,
+      "category": 1
+    },
+    {
+      "id": "4",
+      "name": "Produto Teste id",
+      "price": 89.99,
+      "category": 11
+    },
+    {
+      "id": "bf65",
+      "name": "O Senhor dos Anéis: A Sociedade do Anel",
+      "price": "79.99",
+      "category": 4
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "category": "Eletrônicos"
     },
     {
       "id": 2,
-      "name": "Notebook Dell",
-      "price": 3599.99
+      "category": "Moda e Vestuário"
     },
     {
       "id": 3,
-      "name": "Celular Samsung S20",
-      "price": 5000
+      "category": "Casa e Decoração"
+    },
+    {
+      "id": 4,
+      "category": "Livros e Mídia"
+    },
+    {
+      "id": 5,
+      "category": "Alimentos e Bebidas"
+    },
+    {
+      "id": 6,
+      "category": "Saúde e Beleza"
+    },
+    {
+      "id": 7,
+      "category": "Esportes e Fitness"
+    },
+    {
+      "id": 8,
+      "category": "Automotivo"
+    },
+    {
+      "id": 9,
+      "category": "Brinquedos e Jogos"
+    },
+    {
+      "id": 10,
+      "category": "Ferramentas e Equipamentos"
+    },
+    {
+      "id": 11,
+      "category": "Móveis e Mobília"
+    },
+    {
+      "id": 12,
+      "category": "Joias e Acessórios"
+    },
+    {
+      "id": 13,
+      "category": "Animais de Estimação"
+    },
+    {
+      "id": 14,
+      "category": "Produtos para Bebês e Crianças"
+    },
+    {
+      "id": 15,
+      "category": "Instrumentos Musicais"
+    },
+    {
+      "id": 16,
+      "category": "Artigos de Papelaria e Escritório"
+    },
+    {
+      "id": 17,
+      "category": "Produtos de Limpeza e Higiene"
+    },
+    {
+      "id": 18,
+      "category": "Produtos de Jardinagem"
+    },
+    {
+      "id": 19,
+      "category": "Produtos de Tecnologia e Gadgets"
+    },
+    {
+      "id": 20,
+      "category": "Equipamentos Industriais"
     }
   ]
 }

@@ -19,6 +19,15 @@
            </strong> 
         </mat-form-field>
 
+        <mat-form-field>
+           <strong>
+            <input matInput placeholder="Categoria" 
+                [(ngModel)]="product.category"
+                name="category"
+                disabled="true">
+           </strong> 
+        </mat-form-field>
+
     </form>
     <button mat-raised-button (click)="delete()" class="excluir">
         Deletar

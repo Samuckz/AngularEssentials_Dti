@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { Product } from '../product.model';
-import { ProductServiceService } from '../services/produto-service/product-service.service';
+import { Product } from '../../../../models/product.model';
+import { ProductServiceService } from '../../../../services/produto-service/product-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SnackBarService } from '../services/snackBar-service/snack-bar.service';
+import { SnackBarService } from '../../../../services/snackBar-service/snack-bar.service';
 
 @Component({
   selector: 'app-delete-product',

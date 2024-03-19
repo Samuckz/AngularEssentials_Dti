@@ -1,8 +1,10 @@
-import { SnackBarService } from './../services/snackBar-service/snack-bar.service';
+import { SnackBarService } from '../../../../services/snackBar-service/snack-bar.service';
 import { Component, OnInit } from '@angular/core';
-import { ProductServiceService } from '../services/produto-service/product-service.service';
+import { ProductServiceService } from '../../../../services/produto-service/product-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from './../product.model';
+import { Product } from '../../../../models/product.model';
+import { Category } from 'src/app/models/category.model';
+import { CategoryServiceService } from 'src/app/services/category-service/category-service.service';
 
 @Component({
   selector: 'app-product-update',
@@ -13,11 +15,14 @@ export class ProductUpdateComponent implements OnInit {
   
   product!: Product // inicialização opcional
 
+  categories: Category[] = []
+
   constructor(
     private service: ProductServiceService,
     private router: Router,
     private route: ActivatedRoute,
-    private snackService: SnackBarService
+    private snackService: SnackBarService,
+    private categoryService: CategoryServiceService
   ) { }
 
   ngOnInit(): void {
@@ -28,6 +33,10 @@ export class ProductUpdateComponent implements OnInit {
         this.product = product;
       })
     }
+
+    this.categoryService.getCategories().subscribe((response) => {
+      this.categories = response
+    })
   }
 
   update(): void{

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductServiceService } from '../services/produto-service/product-service.service';
-import { Product } from '../product.model';
+import { ProductServiceService } from '../../../../services/produto-service/product-service.service';
+import { Product } from '../../../../models/product.model';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class ProductReadComponent implements OnInit {
 
   products: Product[] = []
-  displayedColumns = ['id', 'name', 'price', 'action']
+  displayedColumns = ['id', 'name', 'price', 'category' ,'action']
 
   constructor(
     private service: ProductServiceService,

@@ -13,6 +13,16 @@
                 name="price"> 
         </mat-form-field>
 
+        <mat-form-field appearance="fill">
+            <mat-label>Categoria</mat-label>
+            <mat-select
+                [(ngModel)]="product.category"
+                name="category">
+
+              <mat-option *ngFor="let category of categories" [value]="category.id">{{category.category}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
     </form>
     <button mat-raised-button (click)="update()" color="primary">
         Salvar
