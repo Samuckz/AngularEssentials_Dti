@@ -22,6 +22,7 @@ import { DeleteProductComponent } from './components/views/produto/delete-produc
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { FiltroComponent } from './components/views/produto/filtro/filtro.component';
 
 registerLocaleData(ptBr);
 
@@ -38,6 +39,7 @@ registerLocaleData(ptBr);
     ProductRead2Component,
     ProductUpdateComponent,
     DeleteProductComponent,
+    FiltroComponent,
   ],
   imports: [
     BrowserModule,

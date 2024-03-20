@@ -29,6 +29,12 @@
       "name": "Café 3 corações 1Kg",
       "price": 12.99,
       "category": "Alimentos e Bebidas"
+    },
+    {
+      "id": "8f18",
+      "name": "Ventilador Furacão 2000",
+      "price": "129.99",
+      "category": "Casa e Decoração"
     }
   ],
   "categories": [
