@@ -29,34 +29,88 @@
       "name": "Café 3 corações 1Kg",
       "price": 12.99,
       "category": "Alimentos e Bebidas"
-    },
-    {
-      "id": "8f18",
-      "name": "Ventilador Furacão 2000",
-      "price": "129.99",
-      "category": "Casa e Decoração"
     }
   ],
   "categories": [
-    "Eletrônicos",
-    "Moda e Vestuário",
-    "Casa e Decoração",
-    "Livros e Mídia",
-    "Alimentos e Bebidas",
-    "Saúde e Beleza",
-    "Esportes e Fitness",
-    "Automotivo",
-    "Brinquedos e Jogos",
-    "Ferramentas e Equipamentos",
-    "Móveis e Mobília",
-    "Joias e Acessórios",
-    "Animais de Estimação",
-    "Produtos para Bebês e Crianças",
-    "Instrumentos Musicais",
-    "Artigos de Papelaria e Escritório",
-    "Produtos de Limpeza e Higiene",
-    "Produtos de Jardinagem",
-    "Produtos de Tecnologia e Gadgets",
-    "Equipamentos Industriais"
+    {
+      "categoria": "Eletrônicos",
+      "id": "8fe2"
+    },
+    {
+      "categoria": "Moda e Vestuário",
+      "id": "9861"
+    },
+    {
+      "categoria": "Casa e Decoração",
+      "id": "d128"
+    },
+    {
+      "categoria": "Livros e Mídia",
+      "id": "c0f4"
+    },
+    {
+      "categoria": "Alimentos e Bebidas",
+      "id": "220f"
+    },
+    {
+      "categoria": "Saúde e Beleza",
+      "id": "1162"
+    },
+    {
+      "categoria": "Esportes e Fitness",
+      "id": "9df1"
+    },
+    {
+      "categoria": "Automotivo",
+      "id": "d722"
+    },
+    {
+      "categoria": "Brinquedos e Jogos",
+      "id": "5ba1"
+    },
+    {
+      "categoria": "Ferramentas e Equipamentos",
+      "id": "efaa"
+    },
+    {
+      "categoria": "Móveis e Mobília",
+      "id": "a2b2"
+    },
+    {
+      "categoria": "Joias e Acessórios",
+      "id": "93f4"
+    },
+    {
+      "categoria": "Animais de Estimação",
+      "id": "9cf3"
+    },
+    {
+      "categoria": "Produtos para Bebês e Crianças",
+      "id": "51ea"
+    },
+    {
+      "categoria": "Instrumentos Musicais",
+      "id": "1b79"
+    },
+    {
+      "categoria": "Artigos de Papelaria e Escritório",
+      "id": "780c"
+    },
+    {
+      "categoria": "Produtos de Limpeza e Higiene",
+      "id": "c9c4"
+    },
+    {
+      "categoria": "Produtos de Jardinagem",
+      "id": "1e6e"
+    },
+    {
+      "categoria": "Produtos de Tecnologia e Gadgets",
+      "id": "e410"
+    },
+    {
+      "categoria": "Equipamentos Industriais",
+      "id": "51d5"
+    }
   ]
 }

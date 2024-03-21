@@ -15,7 +15,7 @@ export class ProductUpdateComponent implements OnInit {
   
   product!: Product // inicialização opcional
 
-  categories: String[] = []
+  categories: Category[] = []
 
   constructor(
     private service: ProductServiceService,
