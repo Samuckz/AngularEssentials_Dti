@@ -1,4 +1,3 @@
-
 import { SnackBarService } from '../../../../services/snackBar-service/snack-bar.service';
 import { Product } from '../../../../models/product.model';
 import { Component, OnInit } from '@angular/core';

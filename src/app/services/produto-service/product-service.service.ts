@@ -1,7 +1,8 @@
 import { Product } from '../../models/product.model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map } from 'rxjs';
+import { pageable } from 'src/app/models/pageable.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,15 @@ export class ProductServiceService {
     return this.http.post<Product>(this.API, product);
   }
 
-  read(): Observable<Product[]>{
+  read( pagina: number, tamanhoDaPagina: number ): Observable<pageable>{
+    
+    let params = new HttpParams()
+    .set('_page', pagina)
+    .set('_per_page', tamanhoDaPagina)
+    return this.http.get<pageable>(this.API, {params: params})
+  }
+
+  getAllProducts(): Observable<Product[]>{
     return this.http.get<Product[]>(this.API)
   }
 

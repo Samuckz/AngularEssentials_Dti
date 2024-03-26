@@ -25,10 +25,52 @@
       "category": "Livros e Mídia"
     },
     {
-      "id": "21a7",
-      "name": "Café 3 corações 1Kg",
-      "price": 12.99,
-      "category": "Alimentos e Bebidas"
+      "id": "a206",
+      "name": "Produto teste",
+      "price": "123",
+      "category": "Moda e Vestuário"
+    },
+    {
+      "id": "d53d",
+      "name": "Produto teste",
+      "price": "123",
+      "category": "Moda e Vestuário"
+    },
+    {
+      "id": "9111",
+      "name": "Carregador Iphone cabe 2m",
+      "price": "79.99",
+      "category": "Eletrônicos"
+    },
+    {
+      "id": "1d45",
+      "name": "Vestido Zara M",
+      "price": "359.99",
+      "category": "Moda e Vestuário"
+    },
+    {
+      "id": "a7a3",
+      "name": "Livro Arte da Guerra",
+      "price": "89.99",
+      "category": "Livros e Mídia"
+    },
+    {
+      "id": "d7b1",
+      "name": "Jogo Panelas Brastemp | Bege",
+      "price": "499.99",
+      "category": "Casa e Decoração"
+    },
+    {
+      "id": "c93e",
+      "name": "Ar Condicionado Portátil 18000 BTUS",
+      "price": "659.99",
+      "category": "Eletrônicos"
+    },
+    {
+      "id": "294c",
+      "name": "Teclado CT300 - Casiotone 4 Oitavas",
+      "price": "999.99",
+      "category": "Instrumentos Musicais"
     }
   ],
   "categories": [

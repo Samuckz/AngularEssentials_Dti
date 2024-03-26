@@ -13,7 +13,11 @@ import { CategoryServiceService } from 'src/app/services/category-service/catego
 })
 export class ProductUpdateComponent implements OnInit {
   
-  product!: Product // inicialização opcional
+  product: Product = {
+    name: '',
+    price: null,
+    category: null
+  }
 
   categories: Category[] = []
 

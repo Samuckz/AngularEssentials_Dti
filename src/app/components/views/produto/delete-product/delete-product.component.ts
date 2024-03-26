@@ -11,7 +11,11 @@ import { SnackBarService } from '../../../../services/snackBar-service/snack-bar
 })
 export class DeleteProductComponent implements OnInit {
 
-  product!: Product;
+  product: Product = {
+    name: '',
+    price: null,
+    category: null
+  }
 
   constructor(
     private service: ProductServiceService,
